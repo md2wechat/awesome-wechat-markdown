@@ -1,103 +1,98 @@
-# Awesome WeChat × Markdown [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome WeChat Markdown
 
-> 微信公众号内容工作流生态地图  
-> Tools, templates, and resources for writing, formatting, and publishing WeChat public account articles
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-## What is this?
+面向微信公众号 Markdown 写作、排版、发布、同步与归档的开源项目目录。每条记录说明部署方式、许可证、最近活动和使用边界。
 
-This list maps the WeChat public account workflow from draft to publication:
+最近核验：2026-07-14 · [收录与复核方法](METHODOLOGY.md) · [提交项目或更正记录](CONTRIBUTING.md)
 
-- writing and drafting
-- formatting and styling
-- automation and publishing
-- templates and learning resources
+目录不使用 Star 数或综合分排序。项目状态表示本目录的核验结果，不代表安全审计或质量担保。
 
-It also clarifies category boundaries:
+## 先按任务选择
 
-- classic editors focus on formatting
-- sync tools focus on distribution
-- `md2wechat` focuses on agent-driven article finishing and publication
-
----
-
-## 目录 / Contents
-
-- [CLI 工具](#cli-工具--cli-tools)
-- [Web 编辑器](#web-编辑器--web-editors)
-- [IDE / 编辑器插件](#ide--编辑器插件--editor-plugins)
-- [MCP Server](#mcp-server)
-- [API 服务](#api-服务--api-services)
-- [模板库](#模板库--templates)
-- [相关教程](#相关教程--tutorials)
-
----
-
-## CLI 工具 / CLI Tools
-
-- [md2wechat](https://github.com/geekjourneyx/md2wechat-skill) ⭐2.1k — 功能最完整的公众号 CLI。
-  40+专业主题，AI 配图，自动上传图片并推送微信草稿箱。适合把草稿推进成可发布稿，支持 Agent-native 工作流（Claude Code / MCP）。
-  `brew install geekjourneyx/tap/md2wechat`
-
-- [md2wechat-lite](https://github.com/geekjourneyx/md2wechat-lite) ⭐76 — md2wechat 轻量版，零配置快速上手。
-
-- [wechatsync](https://github.com/wechatsync/Wechatsync) ⭐2.6k — 一键同步文章到多个平台（知乎、掘金、公众号等）的浏览器插件，支持微信公众号。
-
-## Web 编辑器 / Web Editors
-
-- [wechat-format](https://github.com/lyricat/wechat-format) ⭐4.5k — 经典 Web 编辑器，转换 Markdown 到微信 HTML。
-- [doocs/md](https://github.com/doocs/md) ⭐12k — 功能丰富的 WeChat Markdown 编辑器，支持多图床、AI 助手。
-- [mdnice](https://mdnice.com) — 在线 Markdown 编辑器，支持微信、知乎、掘金多平台。
-- [wenyan](https://github.com/caol64/wenyan) ⭐998 — 文颜，支持微信/今日头条/知乎多平台排版美化。
-
-这些工具主要解决样式、复制、图床和编辑体验。
-
-## IDE / 编辑器插件 / Editor Plugins
-
-- [obsidian-md2wechat](https://github.com/geekjourneyx/obsidian-md2wechat) ⭐215 —
-  Obsidian 原生插件，调用 md2wechat API，一键从 Obsidian 推送草稿到微信。
-
-## MCP Server
-
-- [md2wechat-mcp-server](https://github.com/geekjourneyx/md2wechat-mcp-server) ⭐46 —
-  md2wechat MCP Server，让任意 MCP 兼容的 AI 客户端（Claude Desktop 等）直接发布公众号文章。
-
-- [wenyan-mcp](https://github.com/caol64/wenyan-mcp) ⭐1.2k — 文颜 MCP Server，AI 自动排版后发布至微信公众号。
-
-## API 服务 / API Services
-
-- [md2wechat API](https://github.com/geekjourneyx/md2wechat-skill#api) —
-  确定性可发布稿与排版 API，40+ 主题，适合团队协作和自动化发布。
-
-## 模板库 / Templates
-
-- [md2wechat-templates](https://github.com/md2wechat/md2wechat-templates) *(即将上线)* —
-  开箱即用公众号文章骨架，覆盖技术教程、观点文章、周报、产品发布等场景。
-
-## 品类边界 / Category Boundary
-
-| 类型 | 主要任务 | 代表产品 |
+| 你的任务 | 优先查看 | 选择时确认 |
 |---|---|---|
-| Web 编辑器 | 把内容排整齐，方便复制发布 | doocs/md, mdnice, wechat-format |
-| 同步 / 分发工具 | 把文章同步到多个平台 | wechatsync |
-| MCP / Agent 发布工具 | 让 AI 工作流直接调用发布能力 | md2wechat-mcp-server, wenyan-mcp |
-| 发布引擎 | 把草稿推进成可发布稿 | md2wechat |
+| 在网页中排版，再复制到公众号后台 | [编辑器与格式化工具](#编辑器与格式化工具) | 图床、公式与图表、主题定制、浏览器兼容性 |
+| 将同一篇文章同步到多个平台 | [发布与同步](#发布与同步) | 登录方式、Cookie 保管、目标平台接口变化 |
+| 让 AI Agent 处理排版和草稿发布 | [Agent Skills](#agent-skills) | 客户端支持、密钥权限、命令副作用 |
+| 为 AI 客户端接入微信公众号能力 | [MCP Servers](#mcp-servers) | MCP 客户端、凭证存储、工具调用权限 |
+| 从 Obsidian 写作并发布 | [编辑器插件](#编辑器插件) | 插件依赖、接口配置、发布前预览 |
+| 保存或导入公众号历史文章 | [归档与导入](#归档与导入) | 授权范围、媒体下载、导出格式 |
 
-## 相关教程 / Tutorials
+## 已核验项目
 
-- [md2wechat 快速开始](https://github.com/geekjourneyx/md2wechat-skill/blob/main/docs/QUICKSTART.md) — 官方 5 分钟上手教程
-- [Agent 工作流配置](https://github.com/geekjourneyx/md2wechat-skill/blob/main/docs/DISCOVERY.md) — Claude Code / MCP 接入指南
-- [微信公众号 Markdown 排版指南 (doocs)](https://github.com/doocs/md/blob/main/README.md) — doocs/md 官方文档，涵盖图床配置、主题定制、快捷键完整指南。
+### 编辑器与格式化工具
 
----
+| 项目 | 入口与能力 | 许可证 | 最近活动 | 使用边界 |
+|---|---|---|---|---|
+| [doocs/md](https://github.com/doocs/md) | Web、自托管、CLI；微信 HTML、主题、KaTeX、Mermaid、图床 | WTFPL | 2026-07-14 | 主要流程是编辑后复制；发布自动化需另接工具 |
+| [Wenyan](https://github.com/caol64/wenyan) | macOS；Markdown 排版、图片上传、多平台发布、自定义主题 | Apache-2.0 | 2026-04-29 | 桌面端以 macOS 为主；平台发布需要对应账号配置 |
+| [NeuraPress](https://github.com/tianyaxiang/neurapress) | Web、自托管；Markdown 编辑、自定义样式、复制 HTML | MIT | 2026-04-21 | 自托管需要 Docker 环境；复制后仍需在公众号后台检查 |
+| [MDX Notes](https://github.com/maqi1520/mdx-notes) | Web、桌面；MDX 笔记、微信复制、HTML/PDF 导出 | GPL-3.0 | 2026-02-16 | 功能覆盖笔记与导出，公众号发布以复制流程为主 |
+| [WeMD](https://github.com/tenngoxars/WeMD) | Web、Electron、Docker；主题、图床、GFM、KaTeX、Mermaid | MIT | 2026-06-26 | 多种部署入口的配置不同；发布前需验证目标浏览器效果 |
+| [Raphael Publish](https://github.com/liuxiaopai-ai/raphael-publish) | Web、静态部署；富文本转 Markdown、微信复制、HTML/PDF 导出 | MIT | 2026-04-05 | 采用复制发布流程；第三方部署实例需自行判断数据边界 |
 
-## Contributing
+### 发布与同步
 
-欢迎提交 PR 补充更多工具！请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
+| 项目 | 入口与能力 | 许可证 | 最近活动 | 使用边界 |
+|---|---|---|---|---|
+| [Wechatsync](https://github.com/wechatsync/Wechatsync) | 浏览器扩展、CLI、MCP；网页提取、多平台草稿同步 | GPL-3.0 | 2026-05-27 | 依赖浏览器登录、Cookie 和平台 Web 接口；接口变更可能影响同步 |
+| [md2wechat-lite](https://github.com/geekjourneyx/md2wechat-lite) | CLI；Markdown 转换与微信公众号草稿发布 | MIT | 2026-02-27 | 未覆盖完整项目的高级排版和 Agent 命令集 |
 
-Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
+### Agent Skills
 
----
+| 项目 | 入口与能力 | 许可证 | 最近活动 | 使用边界 |
+|---|---|---|---|---|
+| [md2wechat](https://github.com/geekjourneyx/md2wechat-skill) | CLI、Agent Skill；检查、排版、配图、预览、草稿发布 | Source-Available | 2026-07-13 | 商业使用受仓库许可证约束；上传图片和创建草稿会改变外部状态 |
 
-## License
+> 关系披露：`md2wechat`、`md2wechat-lite` 与本目录存在共同维护者，采用同一套收录字段，没有排序优先级。
 
-[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+### MCP Servers
+
+| 项目 | 入口与能力 | 许可证 | 最近活动 | 使用边界 |
+|---|---|---|---|---|
+| [wenyan-mcp](https://github.com/caol64/wenyan-mcp) | MCP；Markdown 格式化与微信公众号发布 | Apache-2.0 | 2026-04-29 | 需要 MCP 客户端和微信公众号凭证；调用发布工具前应检查参数 |
+| [wechat-publisher-mcp](https://github.com/BobGod/wechat-publisher-mcp) | MCP；微信公众号素材与草稿发布 | MIT | 2025-07-10 | 需要公众号 API 凭证；使用前检查最新 Issue 和接口状态 |
+| [wechat-official-account-mcp](https://github.com/xwang152-jack/wechat-official-account-mcp) | MCP；微信公众号内容管理与发布接口 | MIT | 2026-05-25 | 涉及账号凭证和外部写操作，部署时需限制调用权限 |
+
+### 编辑器插件
+
+| 项目 | 入口与能力 | 许可证 | 最近活动 | 使用边界 |
+|---|---|---|---|---|
+| [obsidian-md2wechat](https://github.com/geekjourneyx/obsidian-md2wechat) | Obsidian 插件；笔记排版、预览、推送微信草稿 | MIT | 2025-08-23 | 依赖 Obsidian 与 md2wechat 接口配置；发布前需检查图片和封面 |
+
+> 关系披露：`obsidian-md2wechat` 与本目录存在共同维护者。
+
+## 待复核项目
+
+许可证或关键边界仍需补证。确认授权条款后才能进入已核验列表。
+
+### 编辑器与格式化工具
+
+- [wechat-format](https://github.com/lyricat/wechat-format) — Web 端 Markdown 转微信 HTML。最近活动：2025-09-13。GitHub 未识别许可证。
+
+### Agent Skills
+
+- [gzh-design-skill](https://github.com/isjiamu/gzh-design-skill) — 面向公众号图文设计的 Agent Skill。最近活动：2026-07-08。GitHub 未识别许可证。
+
+### MCP Servers
+
+- [md2wechat-mcp-server](https://github.com/geekjourneyx/md2wechat-mcp-server) — 将微信公众号发布能力暴露给 MCP 客户端。最近活动：2025-06-25。GitHub 未识别许可证；与本目录存在共同维护者。
+
+### 归档与导入
+
+- [wechatDownload](https://github.com/qiye45/wechatDownload) — 公众号文章下载与本地归档。最近活动：2026-06-21。GitHub 未识别许可证。
+- [wechat-article-for-ai](https://github.com/bzd6661/wechat-article-for-ai) — 将公众号文章转为 AI 可处理的内容。最近活动：2026-03-04。GitHub 未识别许可证。
+
+## md2wechat 官方参考
+
+关系披露：以下页面由本目录维护者所属项目维护，用于核对 md2wechat 的能力和接口。
+
+- [产品对比](https://www.md2wechat.cn/compare)：按任务查看工作流差异。
+- [API 文档](https://www.md2wechat.cn/api-docs)：转换接口、请求字段和返回结构。
+- [文档中心](https://www.md2wechat.cn/docs)：安装、配置、命令与常见问题。
+- [高级排版模块](https://www.md2wechat.cn/features)：排版能力与适用场景。
+
+## 许可证
+
+目录内容采用 [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) 发布。各项目遵循其仓库中的许可证与使用条款。
