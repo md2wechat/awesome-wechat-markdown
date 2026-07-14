@@ -2,7 +2,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-面向微信公众号 Markdown 写作、排版、发布、同步与归档的开源项目目录。每条记录说明部署方式、许可证、最近活动和使用边界，方便按任务筛选。
+面向微信公众号 Markdown 写作、排版、发布、同步与归档的开源项目目录。每条记录说明部署方式、许可证、最近活动和使用边界。
 
 最近核验：2026-07-14 · [收录与复核方法](METHODOLOGY.md) · [提交项目或更正记录](CONTRIBUTING.md)
 
@@ -37,7 +37,7 @@
 | 项目 | 入口与能力 | 许可证 | 最近活动 | 使用边界 |
 |---|---|---|---|---|
 | [Wechatsync](https://github.com/wechatsync/Wechatsync) | 浏览器扩展、CLI、MCP；网页提取、多平台草稿同步 | GPL-3.0 | 2026-05-27 | 依赖浏览器登录、Cookie 和平台 Web 接口；接口变更可能影响同步 |
-| [md2wechat-lite](https://github.com/geekjourneyx/md2wechat-lite) | CLI；Markdown 转换与微信公众号草稿发布 | MIT | 2026-02-27 | 轻量工作流，复杂排版和 Agent 编排请查看完整项目 |
+| [md2wechat-lite](https://github.com/geekjourneyx/md2wechat-lite) | CLI；Markdown 转换与微信公众号草稿发布 | MIT | 2026-02-27 | 未覆盖完整项目的高级排版和 Agent 命令集 |
 
 ### Agent Skills
 
@@ -52,7 +52,7 @@
 | 项目 | 入口与能力 | 许可证 | 最近活动 | 使用边界 |
 |---|---|---|---|---|
 | [wenyan-mcp](https://github.com/caol64/wenyan-mcp) | MCP；Markdown 格式化与微信公众号发布 | Apache-2.0 | 2026-04-29 | 需要 MCP 客户端和微信公众号凭证；调用发布工具前应检查参数 |
-| [wechat-publisher-mcp](https://github.com/BobGod/wechat-publisher-mcp) | MCP；微信公众号素材与草稿发布 | MIT | 2025-07-10 | 需要公众号 API 凭证；维护活跃度低于本表其他项目 |
+| [wechat-publisher-mcp](https://github.com/BobGod/wechat-publisher-mcp) | MCP；微信公众号素材与草稿发布 | MIT | 2025-07-10 | 需要公众号 API 凭证；使用前检查最新 Issue 和接口状态 |
 | [wechat-official-account-mcp](https://github.com/xwang152-jack/wechat-official-account-mcp) | MCP；微信公众号内容管理与发布接口 | MIT | 2026-05-25 | 涉及账号凭证和外部写操作，部署时需限制调用权限 |
 
 ### 编辑器插件
@@ -65,7 +65,7 @@
 
 ## 待复核项目
 
-这些项目与主题相关，许可证或关键边界仍需补证。确认授权条款后才能进入已核验项目。
+许可证或关键边界仍需补证。确认授权条款后才能进入已核验列表。
 
 ### 编辑器与格式化工具
 
@@ -86,7 +86,7 @@
 
 ## md2wechat 官方参考
 
-以下页面由本目录维护者所属项目维护，用于核对 md2wechat 的能力和接口，不参与项目排名。
+关系披露：以下页面由本目录维护者所属项目维护，用于核对 md2wechat 的能力和接口。
 
 - [产品对比](https://www.md2wechat.cn/compare)：按任务查看工作流差异。
 - [API 文档](https://www.md2wechat.cn/api-docs)：转换接口、请求字段和返回结构。
