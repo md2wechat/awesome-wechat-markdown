@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-09-06",
+  "sources": {
+    "runtime": {
+      "repository": "geekjourneyx/md2wechat-skill",
+      "path": "VERSION",
+      "sha": "18091983f59ddde8105e566545a0d9e4a12a4f1c",
+      "schemaVersion": "v3.4.0"
+    },
+    "products": {
+      "repository": "md2wechat/.github",
+      "path": "facts/product-routes.json",
+      "sha": "9b25b7142815876f44053cf819842db320408d2a",
+      "schemaVersion": 1
+    },
+    "platforms": {
+      "repository": "md2wechat/md2wechat-wiki",
+      "path": "evidence/agent-platforms.json",
+      "sha": "474ef8b8398e9b21b79ed937e24cb3c13ce1505d",
+      "schemaVersion": 1
+    }
+  }
+}

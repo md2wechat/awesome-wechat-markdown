@@ -1,0 +1,348 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-09-06",
+  "activityDefinition": "Latest commit on the repository default branch, using the UTC committer date.",
+  "projects": [
+    {
+      "id": "doocs-md",
+      "name": "doocs/md",
+      "category": "editor-formatting",
+      "entry": "https://github.com/doocs/md",
+      "deployment": "Web / self-hosted",
+      "license": "WTFPL",
+      "lastActivity": "2026-09-05",
+      "status": "verified",
+      "evidenceUrls": [
+        "https://github.com/doocs/md/blob/a9d3da04ccc3a06e347c47f1192f1f6689eee74f/README.md",
+        "https://github.com/doocs/md/blob/a9d3da04ccc3a06e347c47f1192f1f6689eee74f/LICENSE",
+        "https://github.com/doocs/md/commit/a9d3da04ccc3a06e347c47f1192f1f6689eee74f"
+      ],
+      "limitations": "主要通过复制排版结果进入公众号后台；自动发布需要另接工具。",
+      "relationship": "independent"
+    },
+    {
+      "id": "wenyan",
+      "name": "Wenyan",
+      "category": "editor-formatting",
+      "entry": "https://github.com/caol64/wenyan",
+      "deployment": "Web / macOS / self-hosted",
+      "license": "Apache-2.0",
+      "lastActivity": "2026-04-29",
+      "status": "verified",
+      "evidenceUrls": [
+        "https://github.com/caol64/wenyan/blob/eeb8d4f20e217a0985a63ffe80a1496a2e05b0ee/README.md",
+        "https://github.com/caol64/wenyan/blob/eeb8d4f20e217a0985a63ffe80a1496a2e05b0ee/LICENSE",
+        "https://github.com/caol64/wenyan/commit/eeb8d4f20e217a0985a63ffe80a1496a2e05b0ee"
+      ],
+      "limitations": "不同平台需要分别配置账号；Windows 和 Linux 桌面版由关联仓库提供。",
+      "relationship": "independent"
+    },
+    {
+      "id": "neurapress",
+      "name": "NeuraPress",
+      "category": "editor-formatting",
+      "entry": "https://github.com/tianyaxiang/neurapress",
+      "deployment": "Web / Docker self-hosted",
+      "license": "MIT",
+      "lastActivity": "2026-04-21",
+      "status": "verified",
+      "evidenceUrls": [
+        "https://github.com/tianyaxiang/neurapress/blob/90b971697f2a2445cbcbda603b5d5a2494db39fb/README.md",
+        "https://github.com/tianyaxiang/neurapress/blob/90b971697f2a2445cbcbda603b5d5a2494db39fb/LICENSE",
+        "https://github.com/tianyaxiang/neurapress/commit/90b971697f2a2445cbcbda603b5d5a2494db39fb"
+      ],
+      "limitations": "输出以复制到公众号后台为主；自托管需要 Docker 环境。",
+      "relationship": "independent"
+    },
+    {
+      "id": "mdx-notes",
+      "name": "MDX Notes",
+      "category": "editor-formatting",
+      "entry": "https://github.com/maqi1520/mdx-notes",
+      "deployment": "Web / desktop",
+      "license": "GPL-3.0",
+      "lastActivity": "2025-03-25",
+      "status": "verified",
+      "evidenceUrls": [
+        "https://github.com/maqi1520/mdx-notes/blob/8633830b7660540463b97124e0d84441a856db74/README_CN.md",
+        "https://github.com/maqi1520/mdx-notes/blob/8633830b7660540463b97124e0d84441a856db74/LICENCE",
+        "https://github.com/maqi1520/mdx-notes/commit/8633830b7660540463b97124e0d84441a856db74"
+      ],
+      "limitations": "默认分支是桌面版；Web 版位于另一分支，使用前需确认对应构建说明。",
+      "relationship": "independent"
+    },
+    {
+      "id": "wemd",
+      "name": "WeMD",
+      "category": "editor-formatting",
+      "entry": "https://github.com/tenngoxars/WeMD",
+      "deployment": "Web / Electron / Docker",
+      "license": "MIT",
+      "lastActivity": "2026-08-21",
+      "status": "verified",
+      "evidenceUrls": [
+        "https://github.com/tenngoxars/WeMD/blob/964525d80ef63477c3a4b0327fe2a43415ee2bad/README.md",
+        "https://github.com/tenngoxars/WeMD/blob/964525d80ef63477c3a4b0327fe2a43415ee2bad/LICENSE",
+        "https://github.com/tenngoxars/WeMD/commit/964525d80ef63477c3a4b0327fe2a43415ee2bad"
+      ],
+      "limitations": "核心流程是复制 HTML；深色模式和公众号后台效果仍需在发布前预览。",
+      "relationship": "independent"
+    },
+    {
+      "id": "raphael-publish",
+      "name": "Raphael Publish",
+      "category": "editor-formatting",
+      "entry": "https://github.com/liuxiaopai-ai/raphael-publish",
+      "deployment": "Web / static self-hosted",
+      "license": "MIT",
+      "lastActivity": "2026-04-05",
+      "status": "verified",
+      "evidenceUrls": [
+        "https://github.com/liuxiaopai-ai/raphael-publish/blob/1243dff64795fbfc4f33923dae4238f5bfc1812d/README.md",
+        "https://github.com/liuxiaopai-ai/raphael-publish/blob/1243dff64795fbfc4f33923dae4238f5bfc1812d/LICENSE",
+        "https://github.com/liuxiaopai-ai/raphael-publish/commit/1243dff64795fbfc4f33923dae4238f5bfc1812d"
+      ],
+      "limitations": "采用复制发布流程；第三方在线实例的数据处理方式需自行确认。",
+      "relationship": "independent"
+    },
+    {
+      "id": "wechatsync",
+      "name": "Wechatsync",
+      "category": "publishing-sync",
+      "entry": "https://github.com/wechatsync/Wechatsync",
+      "deployment": "Chrome extension / CLI / MCP",
+      "license": "GPL-3.0",
+      "lastActivity": "2026-05-27",
+      "status": "verified",
+      "evidenceUrls": [
+        "https://github.com/wechatsync/Wechatsync/blob/a98e42865387285afcc027c61836488748f3b30f/README.md",
+        "https://github.com/wechatsync/Wechatsync/blob/a98e42865387285afcc027c61836488748f3b30f/LICENSE",
+        "https://github.com/wechatsync/Wechatsync/commit/a98e42865387285afcc027c61836488748f3b30f"
+      ],
+      "limitations": "依赖浏览器登录态和各平台 Web 接口；平台改版可能影响同步。",
+      "relationship": "independent"
+    },
+    {
+      "id": "md2wechat-lite",
+      "name": "md2wechat-lite",
+      "category": "publishing-sync",
+      "entry": "https://github.com/geekjourneyx/md2wechat-lite",
+      "deployment": "CLI",
+      "license": "MIT",
+      "lastActivity": "2026-02-27",
+      "status": "verified",
+      "evidenceUrls": [
+        "https://github.com/geekjourneyx/md2wechat-lite/blob/f87cdd94636521105db54e3e7df041e02bd71935/README.md",
+        "https://github.com/geekjourneyx/md2wechat-lite/blob/f87cdd94636521105db54e3e7df041e02bd71935/LICENSE",
+        "https://github.com/geekjourneyx/md2wechat-lite/commit/f87cdd94636521105db54e3e7df041e02bd71935"
+      ],
+      "limitations": "定位为轻量 CLI，功能范围小于完整 md2wechat；创建草稿需要公众号凭证。",
+      "relationship": "same-owner: maintained by the md2wechat ecosystem maintainer"
+    },
+    {
+      "id": "md2wechat",
+      "name": "md2wechat",
+      "category": "agent-skills",
+      "entry": "https://github.com/geekjourneyx/md2wechat-skill",
+      "deployment": "CLI / Agent Skill",
+      "license": "Source-Available",
+      "lastActivity": "2026-09-01",
+      "status": "verified",
+      "evidenceUrls": [
+        "https://github.com/geekjourneyx/md2wechat-skill/blob/07fdea284e71ddaf5c6b5311238d7e9c2df3b8af/README.md",
+        "https://github.com/geekjourneyx/md2wechat-skill/blob/07fdea284e71ddaf5c6b5311238d7e9c2df3b8af/LICENSE",
+        "https://github.com/geekjourneyx/md2wechat-skill/commit/07fdea284e71ddaf5c6b5311238d7e9c2df3b8af"
+      ],
+      "limitations": "商业使用受仓库许可证约束；上传图片和创建草稿会写入外部服务。",
+      "relationship": "same-owner: maintained by the md2wechat ecosystem maintainer"
+    },
+    {
+      "id": "gzh-design-skill",
+      "name": "gzh-design-skill",
+      "category": "agent-skills",
+      "entry": "https://github.com/isjiamu/gzh-design-skill",
+      "deployment": "Agent Skill / local scripts",
+      "license": "AGPL-3.0-or-later",
+      "lastActivity": "2026-07-08",
+      "status": "verified",
+      "evidenceUrls": [
+        "https://github.com/isjiamu/gzh-design-skill/blob/ba1f4175519b481cb3566616c9e5178705067904/README.md",
+        "https://github.com/isjiamu/gzh-design-skill/blob/ba1f4175519b481cb3566616c9e5178705067904/LICENSE",
+        "https://github.com/isjiamu/gzh-design-skill/commit/ba1f4175519b481cb3566616c9e5178705067904"
+      ],
+      "limitations": "输出用于复制到公众号编辑器；需要兼容 Skill 的 Agent 和本地脚本环境。",
+      "relationship": "independent"
+    },
+    {
+      "id": "wenyan-mcp",
+      "name": "wenyan-mcp",
+      "category": "mcp",
+      "entry": "https://github.com/caol64/wenyan-mcp",
+      "deployment": "MCP / npm / Docker",
+      "license": "Apache-2.0",
+      "lastActivity": "2026-04-29",
+      "status": "verified",
+      "evidenceUrls": [
+        "https://github.com/caol64/wenyan-mcp/blob/fa81c1d1879634dc41958b9177a57638d62d19eb/README.md",
+        "https://github.com/caol64/wenyan-mcp/blob/fa81c1d1879634dc41958b9177a57638d62d19eb/LICENSE",
+        "https://github.com/caol64/wenyan-mcp/commit/fa81c1d1879634dc41958b9177a57638d62d19eb"
+      ],
+      "limitations": "需要 MCP 客户端；发布到公众号还需要配置对应账号凭证。",
+      "relationship": "independent"
+    },
+    {
+      "id": "wechat-publisher-mcp",
+      "name": "wechat-publisher-mcp",
+      "category": "mcp",
+      "entry": "https://github.com/BobGod/wechat-publisher-mcp",
+      "deployment": "MCP / source install",
+      "license": "MIT",
+      "lastActivity": "2025-07-10",
+      "status": "verified",
+      "evidenceUrls": [
+        "https://github.com/BobGod/wechat-publisher-mcp/blob/7b3833c56e10d0ce169fd9091db092773884d367/README.md",
+        "https://github.com/BobGod/wechat-publisher-mcp/blob/7b3833c56e10d0ce169fd9091db092773884d367/LICENSE",
+        "https://github.com/BobGod/wechat-publisher-mcp/commit/7b3833c56e10d0ce169fd9091db092773884d367"
+      ],
+      "limitations": "仓库说明 npm 包尚未发布，安装示例仍含占位仓库地址；使用前需核对源码安装步骤。",
+      "relationship": "independent"
+    },
+    {
+      "id": "wechat-official-account-mcp",
+      "name": "wechat-official-account-mcp",
+      "category": "mcp",
+      "entry": "https://github.com/xwang152-jack/wechat-official-account-mcp",
+      "deployment": "MCP / npm / source install",
+      "license": "MIT",
+      "lastActivity": "2026-05-25",
+      "status": "verified",
+      "evidenceUrls": [
+        "https://github.com/xwang152-jack/wechat-official-account-mcp/blob/b387cad0eba4de54d4ef3589ffaae8329d218e8e/README.md",
+        "https://github.com/xwang152-jack/wechat-official-account-mcp/blob/b387cad0eba4de54d4ef3589ffaae8329d218e8e/LICENSE",
+        "https://github.com/xwang152-jack/wechat-official-account-mcp/commit/b387cad0eba4de54d4ef3589ffaae8329d218e8e"
+      ],
+      "limitations": "需要公众号 AppID 和 AppSecret；素材、草稿与发布工具会改变公众号数据。",
+      "relationship": "independent"
+    },
+    {
+      "id": "md2wechat-mcp-server",
+      "name": "md2wechat-mcp-server",
+      "category": "mcp",
+      "entry": "https://github.com/geekjourneyx/md2wechat-mcp-server",
+      "deployment": "MCP / Go source",
+      "license": "unknown",
+      "lastActivity": "2025-06-25",
+      "status": "review-due",
+      "evidenceUrls": [
+        "https://github.com/geekjourneyx/md2wechat-mcp-server/blob/ea355cd18cdf155adb293aa0c22f89ec6df16d23/README.md",
+        "https://github.com/geekjourneyx/md2wechat-mcp-server/commit/ea355cd18cdf155adb293aa0c22f89ec6df16d23"
+      ],
+      "limitations": "仓库没有可读取的许可证文件；需要 md2wechat API Key，当前 README 只说明转换能力。",
+      "relationship": "same-owner: maintained by the md2wechat ecosystem maintainer"
+    },
+    {
+      "id": "obsidian-md2wechat",
+      "name": "obsidian-md2wechat",
+      "category": "editor-plugins",
+      "entry": "https://github.com/geekjourneyx/obsidian-md2wechat",
+      "deployment": "Obsidian plugin",
+      "license": "MIT",
+      "lastActivity": "2025-08-23",
+      "status": "verified",
+      "evidenceUrls": [
+        "https://github.com/geekjourneyx/obsidian-md2wechat/blob/a13bec2efcd22a321cf653b2b6df82f2c485904e/README.md",
+        "https://github.com/geekjourneyx/obsidian-md2wechat/blob/a13bec2efcd22a321cf653b2b6df82f2c485904e/LICENSE",
+        "https://github.com/geekjourneyx/obsidian-md2wechat/commit/a13bec2efcd22a321cf653b2b6df82f2c485904e"
+      ],
+      "limitations": "依赖 Obsidian 和 md2wechat API 配置；复制或推送前需检查图片与封面。",
+      "relationship": "same-owner: maintained by the md2wechat ecosystem maintainer"
+    },
+    {
+      "id": "wechat-format",
+      "name": "wechat-format",
+      "category": "editor-formatting",
+      "entry": "https://github.com/lyricat/wechat-format",
+      "deployment": "Web / self-hosted",
+      "license": "unknown",
+      "lastActivity": "2025-09-13",
+      "status": "review-due",
+      "evidenceUrls": [
+        "https://github.com/lyricat/wechat-format/blob/76886cfa1637b5fd40939722618012f93a494f70/README.md",
+        "https://github.com/lyricat/wechat-format/commit/76886cfa1637b5fd40939722618012f93a494f70"
+      ],
+      "limitations": "上游 README 已明确停止维护，且仓库没有可读取的许可证文件。",
+      "relationship": "independent"
+    },
+    {
+      "id": "wechat-download",
+      "name": "wechatDownload",
+      "category": "archive-import",
+      "entry": "https://github.com/qiye45/wechatDownload",
+      "deployment": "Windows / macOS desktop / MCP / Skill",
+      "license": "unknown",
+      "lastActivity": "2026-08-16",
+      "status": "review-due",
+      "evidenceUrls": [
+        "https://github.com/qiye45/wechatDownload/blob/4e3ee7cbbdc88816ee8d682253d38df81ae607ae/README.md",
+        "https://github.com/qiye45/wechatDownload/commit/4e3ee7cbbdc88816ee8d682253d38df81ae607ae"
+      ],
+      "limitations": "仓库没有可读取的许可证文件；下载和保存内容前需确认账号授权及原文版权。",
+      "relationship": "independent"
+    },
+    {
+      "id": "wechat-article-for-ai",
+      "name": "wechat-article-for-ai",
+      "category": "archive-import",
+      "entry": "https://github.com/bzd6661/wechat-article-for-ai",
+      "deployment": "CLI / MCP / Skill",
+      "license": "unknown",
+      "lastActivity": "2026-03-04",
+      "status": "review-due",
+      "evidenceUrls": [
+        "https://github.com/bzd6661/wechat-article-for-ai/blob/69de9e413cca3fe6b770c40a4dec204afd5b2b3c/README.md",
+        "https://github.com/bzd6661/wechat-article-for-ai/commit/69de9e413cca3fe6b770c40a4dec204afd5b2b3c"
+      ],
+      "limitations": "仓库没有可读取的许可证文件；转换他人文章前需确认访问权限与内容使用范围。",
+      "relationship": "independent"
+    }
+  ],
+  "platformSource": "https://github.com/md2wechat/md2wechat-wiki/blob/23027229c258e0d67c81b86da0211f14f851065c/evidence/agent-platforms.json",
+  "platforms": [
+    {
+      "id": "qwenwork",
+      "name": "千问办公",
+      "vendor": "阿里巴巴",
+      "entry": "https://www.qianwen.com/",
+      "md2wechatStatus": "install-ready",
+      "publiclySupported": false,
+      "summary": "官方文档提供在线 URL 和 SKILL.zip 安装方式；md2wechat 尚未完成实机验证。"
+    },
+    {
+      "id": "dumate",
+      "name": "DuMate",
+      "vendor": "百度",
+      "entry": "https://www.dumate.cn/",
+      "md2wechatStatus": "install-ready",
+      "publiclySupported": false,
+      "summary": "官方文档提供 URL、.zip 和 .md 导入方式；md2wechat 尚未完成实机验证。"
+    },
+    {
+      "id": "workbuddy",
+      "name": "WorkBuddy",
+      "vendor": "腾讯",
+      "entry": "https://open.workbuddy.cn/",
+      "md2wechatStatus": "smoke-pending",
+      "publiclySupported": false,
+      "summary": "技能接入方式和 md2wechat 实机验证仍待完成。"
+    },
+    {
+      "id": "doubao-work",
+      "name": "豆包工作",
+      "vendor": "字节跳动",
+      "entry": "https://www.doubao.com/work",
+      "md2wechatStatus": "smoke-pending",
+      "publiclySupported": false,
+      "summary": "技能接入方式和 md2wechat 实机验证仍待完成。"
+    }
+  ]
+}
