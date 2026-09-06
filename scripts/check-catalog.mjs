@@ -41,6 +41,18 @@ const expectedLock = {
   }
 }
 const expectedPlatformSource = "https://github.com/md2wechat/md2wechat-wiki/blob/23027229c258e0d67c81b86da0211f14f851065c/evidence/agent-platforms.json"
+const knownMaintainerProjects = new Set([
+  "md2wechat",
+  "md2wechat-lite",
+  "md2wechat-mcp-server",
+  "obsidian-md2wechat"
+])
+const platformNames = [
+  /千问办公|QwenWork/i,
+  /DuMate/i,
+  /WorkBuddy/i,
+  /豆包工作|Doubao/i
+]
 const bannedReadmePatterns = [
   /每条记录说明/,
   /使用边界/,
@@ -81,8 +93,49 @@ function countLinkDestination(text, value) {
     .length
 }
 
-function countLiteral(text, value) {
-  return text.split(value).length - 1
+function markdownLinkDestinations(line) {
+  return [...line.matchAll(/\]\((https:\/\/[^\s)]+)\)/g)].map(match => match[1])
+}
+
+function projectRows(readme) {
+  return readme.split("\n")
+    .filter(line => line.startsWith("|"))
+    .flatMap(line => markdownLinkDestinations(line)
+      .filter(url => {
+        try {
+          return new URL(url).hostname === "github.com"
+        } catch {
+          return false
+        }
+      })
+      .map(url => ({
+        line,
+        rawEntry: url,
+        normalizedEntry: (() => {
+          const parsed = new URL(url)
+          const parts = parsed.pathname.split("/").filter(Boolean)
+          return parts.length >= 2 ? `https://github.com/${parts[0]}/${parts[1]}` : null
+        })()
+      })))
+}
+
+function rowHasCell(row, value) {
+  return row.split("|").slice(1, -1).some(cell => cell.trim() === value)
+}
+
+function hasPositivePlatformClaim(readme) {
+  const positive = /支持|兼容|适配|接入|可用|通过.{0,6}验证/
+  const negated = [
+    /(?:不表示|不代表).{0,40}md2wechat.{0,20}(?:支持|兼容|适配|接入|可用)/i,
+    /md2wechat.{0,20}(?:尚未|未|不|并未|没有).{0,16}(?:支持|兼容|适配|接入|可用|完成.{0,6}验证)/i,
+    /(?:尚未|未|不|并未|没有).{0,20}(?:支持|兼容|适配|接入|可用|完成.{0,6}验证).{0,30}md2wechat/i
+  ]
+  return readme.split("\n").some(line =>
+    /md2wechat/i.test(line) &&
+    platformNames.some(pattern => pattern.test(line)) &&
+    positive.test(line) &&
+    !negated.some(pattern => pattern.test(line))
+  )
 }
 
 function repositoryPath(entry) {
@@ -119,10 +172,22 @@ export function validateLock(lock) {
   return errors
 }
 
-export function validateCatalog(catalog, readme, now = new Date("2026-09-06T23:59:59Z")) {
+export function validateCatalog(catalog, readme, now = new Date()) {
   const errors = []
   if (catalog?.schemaVersion !== 1) errors.push("schemaVersion must equal 1")
-  if (!validCalendarDate(catalog?.reviewedAt)) errors.push("reviewedAt must be a calendar date")
+  const reviewedAtValid = validCalendarDate(catalog?.reviewedAt)
+  const reviewedAtTime = reviewedAtValid
+    ? Date.parse(`${catalog.reviewedAt}T00:00:00.000Z`)
+    : Number.NaN
+  if (!reviewedAtValid) {
+    errors.push("reviewedAt must be a calendar date")
+  } else if (!(now instanceof Date) || !Number.isFinite(now.getTime()) || reviewedAtTime > now.getTime()) {
+    errors.push("reviewedAt must not be in the future")
+  }
+  const updateLines = readme.split("\n").filter(line => /^更新于 \d{4}-\d{2}-\d{2} ·/.test(line))
+  if (updateLines.length !== 1 || updateLines[0] !== `更新于 ${catalog?.reviewedAt} · [我们怎样确认信息](METHODOLOGY.md) · [提交项目或更正](CONTRIBUTING.md)`) {
+    errors.push("README update date must exactly match catalog.reviewedAt")
+  }
   if (catalog?.activityDefinition !== "Latest commit on the repository default branch, using the UTC committer date.") {
     errors.push("activityDefinition must use the default-branch UTC committer date")
   }
@@ -130,6 +195,7 @@ export function validateCatalog(catalog, readme, now = new Date("2026-09-06T23:5
 
   const ids = new Set()
   const entries = new Set()
+  const rows = projectRows(readme)
   for (const project of catalog.projects) {
     const label = project?.id || "<missing-id>"
     for (const field of ["id", "name", "category", "entry", "deployment", "license", "lastActivity", "status", "limitations", "relationship"]) {
@@ -144,8 +210,8 @@ export function validateCatalog(catalog, readme, now = new Date("2026-09-06T23:5
     if (!statusValues.has(project.status)) errors.push(`${label}: invalid status`)
     if (!validCalendarDate(project.lastActivity)) {
       errors.push(`${label}: invalid lastActivity`)
-    } else if (Date.parse(`${project.lastActivity}T00:00:00Z`) > now.getTime()) {
-      errors.push(`${label}: lastActivity is in the future`)
+    } else if (reviewedAtValid && project.lastActivity > catalog.reviewedAt) {
+      errors.push(`${label}: lastActivity must not be later than catalog.reviewedAt`)
     }
     if (!repositoryPath(project.entry)) errors.push(`${label}: entry must be an official GitHub repository URL`)
     if (!Array.isArray(project.evidenceUrls) || project.evidenceUrls.length === 0 || project.evidenceUrls.some(url => !validHttps(url))) {
@@ -175,8 +241,16 @@ export function validateCatalog(catalog, readme, now = new Date("2026-09-06T23:5
     if (project.relationship !== "independent" && !/(?:same-owner|maintainer|affiliated)/.test(project.relationship)) {
       errors.push(`${label}: relationship must explain maintainer affiliation`)
     }
-    if (countLinkDestination(readme, project.entry) !== 1) errors.push(`${label}: entry must appear exactly once in README`)
-    if (countLiteral(readme, project.lastActivity) < 1) errors.push(`${label}: lastActivity is missing from README`)
+    if (knownMaintainerProjects.has(project.id) &&
+        (project.relationship === "independent" || !/(?:same-owner|maintainer|affiliated)/.test(project.relationship))) {
+      errors.push(`${label}: known maintainer relationship must remain disclosed`)
+    }
+    const ownRows = rows.filter(row => row.normalizedEntry === project.entry)
+    if (ownRows.length !== 1 || ownRows[0].rawEntry !== project.entry) {
+      errors.push(`${label}: exact entry must appear in one project table row`)
+    } else if (!rowHasCell(ownRows[0].line, project.lastActivity)) {
+      errors.push(`${label}: own README row must contain its lastActivity`)
+    }
   }
 
   if (catalog.platformSource !== expectedPlatformSource) errors.push("platformSource must pin the reviewed Wiki commit")
@@ -200,11 +274,12 @@ export function validateCatalog(catalog, readme, now = new Date("2026-09-06T23:5
     if (pattern.test(readme)) errors.push(`README contains banned wording: ${pattern}`)
   }
 
-  const listedRepos = [...readme.matchAll(/\(https:\/\/github\.com\/([^/\s)]+)\/([^/\s)#?]+)\)/g)]
-    .map(match => `https://github.com/${match[1]}/${match[2]}`)
-  for (const entry of listedRepos) {
-    if (!entries.has(entry)) errors.push(`README lists an untracked repository: ${entry}`)
+  for (const row of rows) {
+    if (!row.normalizedEntry || !entries.has(row.normalizedEntry)) {
+      errors.push(`README lists an untracked repository: ${row.rawEntry}`)
+    }
   }
+  if (hasPositivePlatformClaim(readme)) errors.push("README overstates md2wechat support for an office-Agent platform")
 
   return errors
 }

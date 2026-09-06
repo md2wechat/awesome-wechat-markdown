@@ -25,7 +25,7 @@
 | 项目 | 入口与用途 | 许可证 | 最近更新 | 使用前留意 |
 |---|---|---|---|---|
 | [doocs/md](https://github.com/doocs/md) | Web、自托管；Markdown 排版、主题、公式、图表与图片上传 | WTFPL | 2026-09-05 | 主要通过复制结果进入公众号后台；自动发布需另接工具 |
-| [Wenyan](https://github.com/caol64/wenyan) | Web、macOS、自托管；排版、图片处理与多平台发布 | Apache-2.0 | 2026-04-29 | 各平台需分别配置账号；Windows 和 Linux 桌面版在关联仓库 |
+| [Wenyan](https://github.com/caol64/wenyan) | Web、macOS；排版、图片处理与多平台发布 | Apache-2.0 | 2026-04-29 | 各平台需分别配置账号；Windows 和 Linux 桌面版在关联仓库 |
 | [NeuraPress](https://github.com/tianyaxiang/neurapress) | Web、Docker；移动端编辑、模板与带格式复制 | MIT | 2026-04-21 | 输出以复制到公众号后台为主；自托管需要 Docker |
 | [MDX Notes](https://github.com/maqi1520/mdx-notes) | Web、桌面；MDX 写作、微信复制及 HTML、PDF 导出 | GPL-3.0 | 2025-03-25 | 默认分支是桌面版，Web 版位于另一分支 |
 | [WeMD](https://github.com/tenngoxars/WeMD) | Web、Electron、Docker；主题、公式、图表与 HTML 复制 | MIT | 2026-08-21 | 深色模式和公众号后台效果仍应在发布前预览 |
@@ -50,7 +50,7 @@
 | 项目 | 入口与用途 | 许可证 | 最近更新 | 使用前留意 |
 |---|---|---|---|---|
 | [wenyan-mcp](https://github.com/caol64/wenyan-mcp) | MCP、npm、Docker；Markdown 排版与微信公众号发布 | Apache-2.0 | 2026-04-29 | 需要 MCP 客户端；公众号发布还需要账号凭证 |
-| [wechat-publisher-mcp](https://github.com/BobGod/wechat-publisher-mcp) | MCP、源码安装；Markdown 转换、封面和草稿操作 | MIT | 2025-07-10 | npm 包尚未发布，安装示例仍含占位仓库地址 |
+| [wechat-publisher-mcp](https://github.com/BobGod/wechat-publisher-mcp) | MCP、源码安装；Markdown 转换、封面、预览与发布 | MIT | 2025-07-10 | npm 包尚未发布，安装示例仍含占位地址；发布会改变公众号数据，需要相应权限 |
 | [wechat-official-account-mcp](https://github.com/xwang152-jack/wechat-official-account-mcp) | MCP、npm、源码安装；素材、草稿与发布接口 | MIT | 2026-05-25 | 需要公众号密钥；素材、草稿与发布操作会改变公众号数据 |
 
 ### 编辑器插件
@@ -72,14 +72,14 @@
 
 ## 办公 Agent 与技能市场
 
-下面只说明官方入口和安装机制调查进度，不表示 md2wechat 已支持这些平台。详情来自尚未合并的 [Wiki 平台证据快照](https://github.com/md2wechat/md2wechat-wiki/blob/23027229c258e0d67c81b86da0211f14f851065c/evidence/agent-platforms.json)。
+下面只说明官方入口和安装机制调查进度，不表示 md2wechat 已支持这些平台。详情固定于 [Wiki 提交 23027229 的平台证据快照](https://github.com/md2wechat/md2wechat-wiki/blob/23027229c258e0d67c81b86da0211f14f851065c/evidence/agent-platforms.json)。
 
 | 平台 | 官方入口 | 当前能确认的内容 |
 |---|---|---|
 | 千问办公 | [进入官网](https://www.qianwen.com/) | 官方文档提供在线 URL 和 SKILL.zip 安装方式；md2wechat 尚未完成实机验证 |
 | DuMate | [进入官网](https://www.dumate.cn/) | 官方文档提供 URL、.zip 和 .md 导入方式；md2wechat 尚未完成实机验证 |
-| WorkBuddy | [进入官网](https://open.workbuddy.cn/) | 技能接入方式和 md2wechat 实机验证仍待完成 |
-| 豆包工作 | [进入官网](https://www.doubao.com/work) | 技能接入方式和 md2wechat 实机验证仍待完成 |
+| WorkBuddy | [进入官网](https://open.workbuddy.cn/) | 平台提供何种技能安装方式仍待确认；md2wechat 尚未完成实机验证 |
+| 豆包工作 | [进入官网](https://www.doubao.com/work) | 平台提供何种技能安装方式仍待确认；md2wechat 尚未完成实机验证 |
 
 ## 最近更新
 

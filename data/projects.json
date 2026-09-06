@@ -25,7 +25,7 @@
       "name": "Wenyan",
       "category": "editor-formatting",
       "entry": "https://github.com/caol64/wenyan",
-      "deployment": "Web / macOS / self-hosted",
+      "deployment": "Web / macOS",
       "license": "Apache-2.0",
       "lastActivity": "2026-04-29",
       "status": "verified",
@@ -204,7 +204,7 @@
         "https://github.com/BobGod/wechat-publisher-mcp/blob/7b3833c56e10d0ce169fd9091db092773884d367/LICENSE",
         "https://github.com/BobGod/wechat-publisher-mcp/commit/7b3833c56e10d0ce169fd9091db092773884d367"
       ],
-      "limitations": "仓库说明 npm 包尚未发布，安装示例仍含占位仓库地址；使用前需核对源码安装步骤。",
+      "limitations": "仓库说明 npm 包尚未发布，安装示例仍含占位仓库地址；调用发布会改变公众号数据，需要相应账号权限。",
       "relationship": "independent"
     },
     {
@@ -333,7 +333,7 @@
       "entry": "https://open.workbuddy.cn/",
       "md2wechatStatus": "smoke-pending",
       "publiclySupported": false,
-      "summary": "技能接入方式和 md2wechat 实机验证仍待完成。"
+      "summary": "平台提供何种技能安装方式仍待确认；md2wechat 尚未完成实机验证。"
     },
     {
       "id": "doubao-work",
@@ -342,7 +342,7 @@
       "entry": "https://www.doubao.com/work",
       "md2wechatStatus": "smoke-pending",
       "publiclySupported": false,
-      "summary": "技能接入方式和 md2wechat 实机验证仍待完成。"
+      "summary": "平台提供何种技能安装方式仍待确认；md2wechat 尚未完成实机验证。"
     }
   ]
 }
