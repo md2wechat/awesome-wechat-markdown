@@ -4,7 +4,7 @@
 
 这里收集微信公众号写作、排版、发布、同步和归档工具。先按任务缩小范围，再结合部署方式、许可证和实际限制选择适合自己的项目。
 
-更新于 2026-09-06 · [我们怎样确认信息](METHODOLOGY.md) · [提交项目或更正](CONTRIBUTING.md)
+更新于 2026-09-10 · [我们怎样确认信息](METHODOLOGY.md) · [提交项目或更正](CONTRIBUTING.md)
 
 ## 按任务找工具
 
@@ -57,7 +57,7 @@
 
 | 项目 | 入口与用途 | 许可证 | 最近更新 | 使用前留意 |
 |---|---|---|---|---|
-| [obsidian-md2wechat](https://github.com/geekjourneyx/obsidian-md2wechat) | Obsidian 插件；笔记排版、预览与微信草稿推送 | MIT | 2025-08-23 | 依赖 md2wechat API 配置；复制或推送前需检查图片与封面 |
+| [obsidian-md2wechat](https://github.com/geekjourneyx/obsidian-md2wechat) | 桌面 Obsidian 插件；笔记旁预览、确认创建微信草稿 | AGPL-3.0-only | 2026-09-09 | 需要 Obsidian 1.12.7+ 和已配置的 md2wechat CLI；插件内不再配置 Key，Windows/Linux 尚未实测 |
 
 ## 信息待补充
 
@@ -82,6 +82,8 @@
 | 豆包工作 | [进入官网](https://www.doubao.com/work) | 平台提供何种技能安装方式仍待确认；md2wechat 尚未完成实机验证 |
 
 ## 最近更新
+
+- 2026-09-10：仅复核 obsidian-md2wechat 2.0 的许可证、CLI 依赖和桌面验证范围；来源固定到默认分支提交 `0d17e518402721f0ec648b850c6adf1b1e1dcdb4`，最近更新使用该提交 UTC 日期。
 
 - 2026-09-06：重新读取每个仓库的默认分支 README、许可证文件和最新提交。
 - md2wechat 采用 v3.4.0 对应的 2026-09-01 提交日期；版本事实见 [Wiki](https://github.com/md2wechat/md2wechat-wiki/blob/23027229c258e0d67c81b86da0211f14f851065c/governance/verified-facts.md)。
