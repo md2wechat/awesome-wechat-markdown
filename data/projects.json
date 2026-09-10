@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-09-06",
+  "reviewedAt": "2026-09-10",
   "activityDefinition": "Latest commit on the repository default branch, using the UTC committer date.",
   "projects": [
     {
@@ -146,12 +146,12 @@
       "entry": "https://github.com/geekjourneyx/md2wechat-skill",
       "deployment": "CLI / Agent Skill",
       "license": "Source-Available",
-      "lastActivity": "2026-09-01",
+      "lastActivity": "2026-09-07",
       "status": "verified",
       "evidenceUrls": [
-        "https://github.com/geekjourneyx/md2wechat-skill/blob/07fdea284e71ddaf5c6b5311238d7e9c2df3b8af/README.md",
-        "https://github.com/geekjourneyx/md2wechat-skill/blob/07fdea284e71ddaf5c6b5311238d7e9c2df3b8af/LICENSE",
-        "https://github.com/geekjourneyx/md2wechat-skill/commit/07fdea284e71ddaf5c6b5311238d7e9c2df3b8af"
+        "https://github.com/geekjourneyx/md2wechat-skill/blob/cbc8c600ed1f9cccbc29a33576f657c07d39ba9a/README.md",
+        "https://github.com/geekjourneyx/md2wechat-skill/blob/cbc8c600ed1f9cccbc29a33576f657c07d39ba9a/LICENSE",
+        "https://github.com/geekjourneyx/md2wechat-skill/commit/cbc8c600ed1f9cccbc29a33576f657c07d39ba9a"
       ],
       "limitations": "商业使用受仓库许可证约束；上传图片和创建草稿会写入外部服务。",
       "relationship": "same-owner: maintained by the md2wechat ecosystem maintainer"

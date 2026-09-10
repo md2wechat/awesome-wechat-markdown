@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-09-06",
+  "reviewedAt": "2026-09-10",
   "sources": {
     "runtime": {
       "repository": "geekjourneyx/md2wechat-skill",
       "path": "VERSION",
-      "sha": "18091983f59ddde8105e566545a0d9e4a12a4f1c",
-      "schemaVersion": "v3.4.0"
+      "sha": "1545d966571dc86b54c98f888a0e6451501f8c81",
+      "schemaVersion": "v3.5.0"
     },
     "products": {
       "repository": "md2wechat/.github",

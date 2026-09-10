@@ -4,7 +4,7 @@
 
 这里收集微信公众号写作、排版、发布、同步和归档工具。先按任务缩小范围，再结合部署方式、许可证和实际限制选择适合自己的项目。
 
-更新于 2026-09-06 · [我们怎样确认信息](METHODOLOGY.md) · [提交项目或更正](CONTRIBUTING.md)
+更新于 2026-09-10 · [我们怎样确认信息](METHODOLOGY.md) · [提交项目或更正](CONTRIBUTING.md)
 
 ## 按任务找工具
 
@@ -42,7 +42,7 @@
 
 | 项目 | 入口与用途 | 许可证 | 最近更新 | 使用前留意 |
 |---|---|---|---|---|
-| [md2wechat](https://github.com/geekjourneyx/md2wechat-skill) | CLI、Agent Skill；检查、排版、配图、预览与草稿创建 | Source-Available | 2026-09-01 | 商业使用受仓库许可证约束；上传图片和创建草稿会写入外部服务 |
+| [md2wechat](https://github.com/geekjourneyx/md2wechat-skill) | CLI、Agent Skill；检查、排版、配图、预览与草稿创建 | Source-Available | 2026-09-07 | 商业使用受仓库许可证约束；上传图片和创建草稿会写入外部服务 |
 | [gzh-design-skill](https://github.com/isjiamu/gzh-design-skill) | Agent Skill、本地脚本；将 Markdown 排成可复制的公众号 HTML | AGPL-3.0-or-later | 2026-07-08 | 需要兼容 Skill 的 Agent 和本地脚本环境，结果仍要复制到公众号后台 |
 
 ### MCP
@@ -84,7 +84,7 @@
 ## 最近更新
 
 - 2026-09-06：重新读取每个仓库的默认分支 README、许可证文件和最新提交。
-- md2wechat 采用 v3.4.0 对应的 2026-09-01 提交日期；版本事实见 [Wiki](https://github.com/md2wechat/md2wechat-wiki/blob/23027229c258e0d67c81b86da0211f14f851065c/governance/verified-facts.md)。
+- 2026-09-10：仅复核 md2wechat 的默认分支 README、许可证及提交；采用 v3.5.0 对应的 2026-09-07 提交日期，8 个图片服务包含本版新增 Atlas Cloud 和既有 TuZi；版本事实见 [Wiki](https://github.com/md2wechat/md2wechat-wiki/blob/b85fd97190cee257a14ae0ec0387438f76d94e39/governance/verified-facts.md)。
 - 项目日期表示默认分支最新提交的 UTC 日期，只帮助判断信息新旧。
 
 ## 使用前留意
