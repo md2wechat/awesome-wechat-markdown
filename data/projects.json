@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-09-06",
+  "reviewedAt": "2026-09-10",
   "activityDefinition": "Latest commit on the repository default branch, using the UTC committer date.",
   "projects": [
     {
@@ -245,16 +245,17 @@
       "name": "obsidian-md2wechat",
       "category": "editor-plugins",
       "entry": "https://github.com/geekjourneyx/obsidian-md2wechat",
-      "deployment": "Obsidian plugin",
-      "license": "MIT",
-      "lastActivity": "2025-08-23",
+      "deployment": "Desktop Obsidian plugin / external md2wechat CLI",
+      "license": "AGPL-3.0-only",
+      "lastActivity": "2026-09-09",
       "status": "verified",
       "evidenceUrls": [
-        "https://github.com/geekjourneyx/obsidian-md2wechat/blob/a13bec2efcd22a321cf653b2b6df82f2c485904e/README.md",
-        "https://github.com/geekjourneyx/obsidian-md2wechat/blob/a13bec2efcd22a321cf653b2b6df82f2c485904e/LICENSE",
-        "https://github.com/geekjourneyx/obsidian-md2wechat/commit/a13bec2efcd22a321cf653b2b6df82f2c485904e"
+        "https://github.com/geekjourneyx/obsidian-md2wechat/blob/0d17e518402721f0ec648b850c6adf1b1e1dcdb4/README.md",
+        "https://github.com/geekjourneyx/obsidian-md2wechat/blob/0d17e518402721f0ec648b850c6adf1b1e1dcdb4/LICENSE",
+        "https://github.com/geekjourneyx/obsidian-md2wechat/commit/0d17e518402721f0ec648b850c6adf1b1e1dcdb4",
+        "https://github.com/geekjourneyx/obsidian-md2wechat/releases/tag/v2.0.0"
       ],
-      "limitations": "依赖 Obsidian 和 md2wechat API 配置；复制或推送前需检查图片与封面。",
+      "limitations": "仅桌面 Obsidian 1.12.7+；依赖已配置的 md2wechat CLI，插件内不再配置 API Key；Agent 接入还需官方命令行支持。macOS 已有实测记录，Windows/Linux 尚未实测；确认后创建草稿，不自动正式发布。",
       "relationship": "same-owner: maintained by the md2wechat ecosystem maintainer"
     },
     {
