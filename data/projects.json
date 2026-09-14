@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-09-10",
+  "reviewedAt": "2026-09-14",
   "activityDefinition": "Latest commit on the repository default branch, using the UTC committer date.",
   "projects": [
     {
@@ -146,14 +146,15 @@
       "entry": "https://github.com/geekjourneyx/md2wechat-skill",
       "deployment": "CLI / Agent Skill",
       "license": "Source-Available",
-      "lastActivity": "2026-09-07",
+      "lastActivity": "2026-09-12",
       "status": "verified",
       "evidenceUrls": [
-        "https://github.com/geekjourneyx/md2wechat-skill/blob/cbc8c600ed1f9cccbc29a33576f657c07d39ba9a/README.md",
-        "https://github.com/geekjourneyx/md2wechat-skill/blob/cbc8c600ed1f9cccbc29a33576f657c07d39ba9a/LICENSE",
-        "https://github.com/geekjourneyx/md2wechat-skill/commit/cbc8c600ed1f9cccbc29a33576f657c07d39ba9a"
+        "https://github.com/geekjourneyx/md2wechat-skill/blob/342cc66b492bd2bcf5039920e3cc52bd44a9bf0e/README.md",
+        "https://github.com/geekjourneyx/md2wechat-skill/blob/342cc66b492bd2bcf5039920e3cc52bd44a9bf0e/LICENSE",
+        "https://github.com/geekjourneyx/md2wechat-skill/commit/342cc66b492bd2bcf5039920e3cc52bd44a9bf0e",
+        "https://github.com/geekjourneyx/md2wechat-skill/blob/9cb3318f84ff980d1cac41ab0fafbcec525ef6dd/docs/SYNC.md"
       ],
-      "limitations": "商业使用受仓库许可证约束；上传图片和创建草稿会写入外部服务。",
+      "limitations": "商业使用受仓库许可证约束；上传图片和创建草稿会写入外部服务。；v3.6.0 支持本地准备后由浏览器 Agent 保存知乎、CSDN、头条未发布草稿，准备成功不等于草稿完成，不包含公开发布。",
       "relationship": "same-owner: maintained by the md2wechat ecosystem maintainer"
     },
     {
@@ -245,16 +246,17 @@
       "name": "obsidian-md2wechat",
       "category": "editor-plugins",
       "entry": "https://github.com/geekjourneyx/obsidian-md2wechat",
-      "deployment": "Obsidian plugin",
-      "license": "MIT",
-      "lastActivity": "2025-08-23",
+      "deployment": "Desktop Obsidian plugin / external md2wechat CLI",
+      "license": "AGPL-3.0-only",
+      "lastActivity": "2026-09-09",
       "status": "verified",
       "evidenceUrls": [
-        "https://github.com/geekjourneyx/obsidian-md2wechat/blob/a13bec2efcd22a321cf653b2b6df82f2c485904e/README.md",
-        "https://github.com/geekjourneyx/obsidian-md2wechat/blob/a13bec2efcd22a321cf653b2b6df82f2c485904e/LICENSE",
-        "https://github.com/geekjourneyx/obsidian-md2wechat/commit/a13bec2efcd22a321cf653b2b6df82f2c485904e"
+        "https://github.com/geekjourneyx/obsidian-md2wechat/blob/0d17e518402721f0ec648b850c6adf1b1e1dcdb4/README.md",
+        "https://github.com/geekjourneyx/obsidian-md2wechat/blob/0d17e518402721f0ec648b850c6adf1b1e1dcdb4/LICENSE",
+        "https://github.com/geekjourneyx/obsidian-md2wechat/commit/0d17e518402721f0ec648b850c6adf1b1e1dcdb4",
+        "https://github.com/geekjourneyx/obsidian-md2wechat/releases/tag/v2.0.0"
       ],
-      "limitations": "依赖 Obsidian 和 md2wechat API 配置；复制或推送前需检查图片与封面。",
+      "limitations": "仅桌面 Obsidian 1.12.7+；依赖已配置的 md2wechat CLI，插件内不再配置 API Key；Agent 接入还需官方命令行支持。macOS 已有实测记录，Windows/Linux 尚未实测；确认后创建草稿，不自动正式发布。",
       "relationship": "same-owner: maintained by the md2wechat ecosystem maintainer"
     },
     {
