@@ -18,13 +18,13 @@ const expectedPlatformStatuses = {
 }
 const expectedLock = {
   schemaVersion: 1,
-  reviewedAt: "2026-09-06",
+  reviewedAt: "2026-09-14",
   sources: {
     runtime: {
       repository: "geekjourneyx/md2wechat-skill",
       path: "VERSION",
-      sha: "18091983f59ddde8105e566545a0d9e4a12a4f1c",
-      schemaVersion: "v3.4.0"
+      sha: "40c341bdcdbe83bbbda981fa85368c0e1a63d0c7",
+      schemaVersion: "v3.6.0"
     },
     products: {
       repository: "md2wechat/.github",
