@@ -4,7 +4,7 @@
 
 这里收集微信公众号写作、排版、发布、同步和归档工具。先按任务缩小范围，再结合部署方式、许可证和实际限制选择适合自己的项目。
 
-更新于 2026-09-10 · [我们怎样确认信息](METHODOLOGY.md) · [提交项目或更正](CONTRIBUTING.md)
+更新于 2026-09-14 · [我们怎样确认信息](METHODOLOGY.md) · [提交项目或更正](CONTRIBUTING.md)
 
 ## 按任务找工具
 
@@ -59,6 +59,12 @@
 |---|---|---|---|---|
 | [obsidian-md2wechat](https://github.com/geekjourneyx/obsidian-md2wechat) | 桌面 Obsidian 插件；笔记旁预览、确认创建微信草稿 | AGPL-3.0-only | 2026-09-09 | 需要 Obsidian 1.12.7+ 和已配置的 md2wechat CLI；插件内不再配置 Key，Windows/Linux 尚未实测 |
 
+### 归档与导入
+
+| 项目 | 入口与用途 | 许可证 | 最近更新 | 使用前留意 |
+|---|---|---|---|---|
+| [ReadGZH](https://github.com/sweesama/readgzh) | 托管网页、REST API、远程 MCP；将已有公开公众号文章链接转为正文或 Markdown | AGPL-3.0 | 2026-09-14 | 托管服务按积分使用；缓存搜索不等于全微信搜索，不保证删除或付费文章可读；由项目维护者投稿 |
+
 ## 信息待补充
 
 这些项目与主题相关，但缺少可读取的许可证文件，因此暂不放入上面的确认清单。
@@ -82,6 +88,8 @@
 | 豆包工作 | [进入官网](https://www.doubao.com/work) | 平台提供何种技能安装方式仍待确认；md2wechat 尚未完成实机验证 |
 
 ## 最近更新
+
+- 2026-09-14：新增 ReadGZH，仅核对该项目的一手资料；其他项目沿用此前核验记录。
 
 - 2026-09-10：仅复核 obsidian-md2wechat 2.0 的许可证、CLI 依赖和桌面验证范围；来源固定到默认分支提交 `0d17e518402721f0ec648b850c6adf1b1e1dcdb4`，最近更新使用该提交 UTC 日期。
 

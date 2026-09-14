@@ -1,8 +1,25 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-09-10",
+  "reviewedAt": "2026-09-14",
   "activityDefinition": "Latest commit on the repository default branch, using the UTC committer date.",
   "projects": [
+    {
+      "id": "readgzh",
+      "name": "ReadGZH",
+      "category": "archive-import",
+      "entry": "https://github.com/sweesama/readgzh",
+      "deployment": "Hosted Web / REST API / remote MCP",
+      "license": "AGPL-3.0",
+      "lastActivity": "2026-09-14",
+      "status": "verified",
+      "evidenceUrls": [
+        "https://github.com/sweesama/readgzh/blob/4b253e21c5710f87563e22ba785e666ddb964b31/README.md",
+        "https://github.com/sweesama/readgzh/blob/4b253e21c5710f87563e22ba785e666ddb964b31/LICENSE",
+        "https://github.com/sweesama/readgzh/commit/4b253e21c5710f87563e22ba785e666ddb964b31"
+      ],
+      "limitations": "托管服务按积分使用；仅处理已有公开文章链接，缓存搜索不等于全微信搜索，不保证删除或付费文章可读。",
+      "relationship": "maintainer: submitted by ReadGZH maintainer sweesama"
+    },
     {
       "id": "doocs-md",
       "name": "doocs/md",
