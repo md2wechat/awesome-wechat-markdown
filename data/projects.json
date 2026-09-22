@@ -154,7 +154,7 @@
         "https://github.com/geekjourneyx/md2wechat-skill/commit/342cc66b492bd2bcf5039920e3cc52bd44a9bf0e",
         "https://github.com/geekjourneyx/md2wechat-skill/blob/9cb3318f84ff980d1cac41ab0fafbcec525ef6dd/docs/SYNC.md"
       ],
-      "limitations": "商业使用受仓库许可证约束；上传图片和创建草稿会写入外部服务。；v3.6.0 支持本地准备后由浏览器 Agent 保存知乎、CSDN、头条未发布草稿，准备成功不等于草稿完成，不包含公开发布。",
+      "limitations": "商业使用受仓库许可证约束；上传图片和创建草稿会写入外部服务；v3.6.0 支持本地准备后由浏览器 Agent 保存知乎、CSDN、头条未发布草稿，准备成功不等于草稿完成，不包含公开发布。",
       "relationship": "same-owner: maintained by the md2wechat ecosystem maintainer"
     },
     {
