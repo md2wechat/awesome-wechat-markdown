@@ -4,7 +4,7 @@
 
 这里收集微信公众号写作、排版、发布、同步和归档工具。先按任务缩小范围，再结合部署方式、许可证和实际限制选择适合自己的项目。
 
-更新于 2026-09-14 · [我们怎样确认信息](METHODOLOGY.md) · [提交项目或更正](CONTRIBUTING.md)
+更新于 2026-10-01 · [我们怎样确认信息](METHODOLOGY.md) · [提交项目或更正](CONTRIBUTING.md)
 
 ## 按任务找工具
 
@@ -42,7 +42,7 @@
 
 | 项目 | 入口与用途 | 许可证 | 最近更新 | 使用前留意 |
 |---|---|---|---|---|
-| [md2wechat](https://github.com/geekjourneyx/md2wechat-skill) | CLI、Agent Skill；公众号排版与草稿，知乎、CSDN、头条未发布草稿 | Source-Available | 2026-09-12 | 商业使用受许可证约束；多平台需浏览器 Agent 和已登录账号，准备成功不等于草稿完成，不包含公开发布 |
+| [md2wechat](https://github.com/geekjourneyx/md2wechat-skill) | CLI、Agent Skill；公众号排版与草稿，多平台未发布草稿 | Source-Available | 2026-09-24 | 商业使用受许可证约束；v3.8 高级排版仍以静态输出为准，微信内点击交互尚未验证；准备成功不等于草稿完成，不包含公开发布 |
 | [gzh-design-skill](https://github.com/isjiamu/gzh-design-skill) | Agent Skill、本地脚本；将 Markdown 排成可复制的公众号 HTML | AGPL-3.0-or-later | 2026-07-08 | 需要兼容 Skill 的 Agent 和本地脚本环境，结果仍要复制到公众号后台 |
 
 ### MCP
@@ -82,6 +82,8 @@
 | 豆包工作 | [进入官网](https://www.doubao.com/work) | 平台提供何种技能安装方式仍待确认；md2wechat 尚未完成实机验证 |
 
 ## 最近更新
+
+- 2026-10-01：md2wechat 当前版本校准为 [v3.8.0](https://github.com/geekjourneyx/md2wechat-skill/releases/tag/v3.8.0)（2026-09-24 发布），排版口径更新为 48 / 83 / 59 / 65；新增 `cover-reveal`、`expand`、3 种刊头变体和 12 个品牌符号。微信内点击交互尚未验证，四办公 Agent 状态不升级，其他项目沿用各自核对记录。
 
 - 2026-09-14：md2wechat 当前版本校准为 [v3.6.0](https://github.com/geekjourneyx/md2wechat-skill/releases/tag/v3.6.0)（2026-09-12 发布），补充[多平台草稿流程](https://github.com/geekjourneyx/md2wechat-skill/blob/9cb3318f84ff980d1cac41ab0fafbcec525ef6dd/docs/SYNC.md)。48 / 77 / 56 / 63 与 8 个图片服务不变；四办公 Agent 状态不升级，其他项目沿用各自核对记录。
 
