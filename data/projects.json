@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-09-14",
+  "reviewedAt": "2026-10-01",
   "activityDefinition": "Latest commit on the repository default branch, using the UTC committer date.",
   "projects": [
     {
@@ -146,15 +146,16 @@
       "entry": "https://github.com/geekjourneyx/md2wechat-skill",
       "deployment": "CLI / Agent Skill",
       "license": "Source-Available",
-      "lastActivity": "2026-09-12",
+      "lastActivity": "2026-09-24",
       "status": "verified",
       "evidenceUrls": [
-        "https://github.com/geekjourneyx/md2wechat-skill/blob/342cc66b492bd2bcf5039920e3cc52bd44a9bf0e/README.md",
-        "https://github.com/geekjourneyx/md2wechat-skill/blob/342cc66b492bd2bcf5039920e3cc52bd44a9bf0e/LICENSE",
-        "https://github.com/geekjourneyx/md2wechat-skill/commit/342cc66b492bd2bcf5039920e3cc52bd44a9bf0e",
-        "https://github.com/geekjourneyx/md2wechat-skill/blob/9cb3318f84ff980d1cac41ab0fafbcec525ef6dd/docs/SYNC.md"
+        "https://github.com/geekjourneyx/md2wechat-skill/blob/fce5fa3b4494fded0bdb942d50d17485281055d6/README.md",
+        "https://github.com/geekjourneyx/md2wechat-skill/blob/fce5fa3b4494fded0bdb942d50d17485281055d6/LICENSE",
+        "https://github.com/geekjourneyx/md2wechat-skill/commit/fce5fa3b4494fded0bdb942d50d17485281055d6",
+        "https://github.com/geekjourneyx/md2wechat-skill/blob/fce5fa3b4494fded0bdb942d50d17485281055d6/docs/LAYOUT.md",
+        "https://github.com/geekjourneyx/md2wechat-skill/blob/fce5fa3b4494fded0bdb942d50d17485281055d6/docs/SYNC.md"
       ],
-      "limitations": "商业使用受仓库许可证约束；上传图片和创建草稿会写入外部服务；v3.6.0 支持本地准备后由浏览器 Agent 保存知乎、CSDN、头条未发布草稿，准备成功不等于草稿完成，不包含公开发布。",
+      "limitations": "商业使用受仓库许可证约束；上传图片和创建草稿会写入外部服务；v3.8.0 高级排版仍以静态输出为准，微信内点击交互尚未验证；多平台本地准备成功不等于草稿完成，不包含公开发布。",
       "relationship": "same-owner: maintained by the md2wechat ecosystem maintainer"
     },
     {
