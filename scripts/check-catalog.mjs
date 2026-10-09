@@ -11,14 +11,14 @@ const categoryValues = new Set([
 ])
 const statusValues = new Set(["verified", "review-due", "archived"])
 const expectedPlatformStatuses = {
-  qwenwork: "install-ready",
-  dumate: "install-ready",
-  workbuddy: "smoke-pending",
-  "doubao-work": "smoke-pending"
+  qwenwork: "review-due",
+  dumate: "review-due",
+  workbuddy: "review-due",
+  "doubao-work": "review-due"
 }
 const expectedLock = {
   schemaVersion: 1,
-  reviewedAt: "2026-10-01",
+  reviewedAt: "2026-10-09",
   sources: {
     runtime: {
       repository: "geekjourneyx/md2wechat-skill",
@@ -35,12 +35,12 @@ const expectedLock = {
     platforms: {
       repository: "md2wechat/md2wechat-wiki",
       path: "evidence/agent-platforms.json",
-      sha: "474ef8b8398e9b21b79ed937e24cb3c13ce1505d",
+      sha: "0acae95ed7d5e209232d15cb6947cfee88c22c57",
       schemaVersion: 1
     }
   }
 }
-const expectedPlatformSource = "https://github.com/md2wechat/md2wechat-wiki/blob/23027229c258e0d67c81b86da0211f14f851065c/evidence/agent-platforms.json"
+const expectedPlatformSource = "https://github.com/md2wechat/md2wechat-wiki/blob/8f5efade60116ee2b6cd1f2bb10fee685b0ff967/evidence/agent-platforms.json"
 const knownMaintainerProjects = new Set([
   "md2wechat",
   "md2wechat-lite",

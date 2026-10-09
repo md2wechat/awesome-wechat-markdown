@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-10-01",
+  "reviewedAt": "2026-10-09",
   "activityDefinition": "Latest commit on the repository default branch, using the UTC committer date.",
   "projects": [
     {
@@ -309,14 +309,14 @@
       "relationship": "independent"
     }
   ],
-  "platformSource": "https://github.com/md2wechat/md2wechat-wiki/blob/23027229c258e0d67c81b86da0211f14f851065c/evidence/agent-platforms.json",
+  "platformSource": "https://github.com/md2wechat/md2wechat-wiki/blob/8f5efade60116ee2b6cd1f2bb10fee685b0ff967/evidence/agent-platforms.json",
   "platforms": [
     {
       "id": "qwenwork",
       "name": "千问办公",
       "vendor": "阿里巴巴",
       "entry": "https://www.qianwen.com/",
-      "md2wechatStatus": "install-ready",
+      "md2wechatStatus": "review-due",
       "publiclySupported": false,
       "summary": "官方文档提供在线 URL 和 SKILL.zip 安装方式；md2wechat 尚未完成实机验证。"
     },
@@ -325,7 +325,7 @@
       "name": "DuMate",
       "vendor": "百度",
       "entry": "https://www.dumate.cn/",
-      "md2wechatStatus": "install-ready",
+      "md2wechatStatus": "review-due",
       "publiclySupported": false,
       "summary": "官方文档提供 URL、.zip 和 .md 导入方式；md2wechat 尚未完成实机验证。"
     },
@@ -334,7 +334,7 @@
       "name": "WorkBuddy",
       "vendor": "腾讯",
       "entry": "https://open.workbuddy.cn/",
-      "md2wechatStatus": "smoke-pending",
+      "md2wechatStatus": "review-due",
       "publiclySupported": false,
       "summary": "平台提供何种技能安装方式仍待确认；md2wechat 尚未完成实机验证。"
     },
@@ -343,7 +343,7 @@
       "name": "豆包工作",
       "vendor": "字节跳动",
       "entry": "https://www.doubao.com/work",
-      "md2wechatStatus": "smoke-pending",
+      "md2wechatStatus": "review-due",
       "publiclySupported": false,
       "summary": "平台提供何种技能安装方式仍待确认；md2wechat 尚未完成实机验证。"
     }
