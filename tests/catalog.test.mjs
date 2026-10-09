@@ -6,13 +6,22 @@ import { validateCatalog, validateLock } from "../scripts/check-catalog.mjs"
 const catalog = JSON.parse(readFileSync(new URL("../data/projects.json", import.meta.url), "utf8"))
 const lock = JSON.parse(readFileSync(new URL("../.md2wechat/ecosystem-facts.lock.json", import.meta.url), "utf8"))
 const readme = readFileSync(new URL("../README.md", import.meta.url), "utf8")
-const reviewNow = new Date("2026-09-14T12:00:00Z")
+const reviewNow = new Date("2026-10-09T12:00:00Z")
 const validate = (value = catalog, markdown = readme) =>
   validateCatalog(value, markdown, reviewNow)
 
 test("current catalog, README and ecosystem pins agree", () => {
   assert.deepEqual(validateLock(lock), [])
   assert.deepEqual(validate(), [])
+})
+
+test("md2wechat entry reflects the current v3.8 facts", () => {
+  const project = catalog.projects.find(item => item.name === "md2wechat")
+  assert.ok(project)
+  assert.equal(project.lastActivity, "2026-09-24")
+  assert.match(project.limitations, /v3\.8\.0/)
+  assert.match(project.limitations, /微信[^。；]*交互[^。；]*尚未验证/)
+  assert.match(readme, /48 \/ 83 \/ 59 \/ 65/)
 })
 
 test("verified projects have repository README, license and activity evidence", () => {
@@ -88,17 +97,17 @@ test("each activity date must stay in its own project row", () => {
 
 test("catalog review date and README update line share one snapshot date", () => {
   const future = structuredClone(catalog)
-  future.reviewedAt = "2026-09-15"
-  const futureReadme = readme.replace("更新于 2026-09-14 ·", "更新于 2026-09-15 ·")
+  future.reviewedAt = "2026-10-10"
+  const futureReadme = readme.replace("更新于 2026-10-09 ·", "更新于 2026-10-10 ·")
   assert.match(validate(future, futureReadme).join("\n"), /reviewedAt must not be in the future/)
 
-  const mismatchedReadme = readme.replace("更新于 2026-09-14 ·", "更新于 2026-09-05 ·")
+  const mismatchedReadme = readme.replace("更新于 2026-10-09 ·", "更新于 2026-09-05 ·")
   assert.match(validate(catalog, mismatchedReadme).join("\n"), /README update date must exactly match/)
 })
 
 test("project activity cannot be later than the catalog snapshot", () => {
   const changed = structuredClone(catalog)
-  changed.projects[0].lastActivity = "2026-09-15"
+  changed.projects[0].lastActivity = "2026-10-10"
   assert.match(validate(changed).join("\n"), /lastActivity must not be later than catalog.reviewedAt/)
 })
 
